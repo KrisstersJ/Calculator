@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,10 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        int first;
+        int second;
+        char op;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +32,77 @@ namespace Calculator
 
         private void NumericButton_Click (object sender, RoutedEventArgs e)
         {
-            Display.Text = "1";
+            Button button = (Button)sender;
+            Display.Text += button.Content.ToString();
+            second = Int32.Parse(Display.Text);
+            
+            
+        }
+        private void OperationButton_Click(object sender, RoutedEventArgs e)
+        {
+            Display.Clear();
+        }
+
+        private void Display_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Divide_Click(object sender, RoutedEventArgs e)
+        {
+            first = Int32.Parse(Display.Text);
+            op = '/';
+            Display.Clear();
+
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            first = Int32.Parse(Display.Text);
+            op = '+';
+            Display.Clear();
+        }
+
+        private void Subtract_Click(object sender, RoutedEventArgs e)
+        {
+            first = Int32.Parse(Display.Text);
+            op = '-';
+            Display.Clear();
+        }
+
+        private void Multiply_Click(object sender, RoutedEventArgs e)
+        {
+            first = Int32.Parse(Display.Text);
+            op = '*';
+            Display.Clear();
+        }
+
+        private void Equal_Click(object sender, RoutedEventArgs e)
+        {
+            second = Int32.Parse(Display.Text);
+            int result = 0;
+
+            if(op == '+')
+            {
+                result = first + second;
+            }
+            else if (op == '*')
+            {
+                result = first * second;
+            }
+            else if (op == '-')
+            {
+                result = first - second;
+            }
+            else if (op == '/')
+            {
+                result = first / second;
+            }
+            if(Display.Text == "0")
+            {
+                Display.Clear();
+            }
+            Display.Text = result.ToString();
         }
     }
 }

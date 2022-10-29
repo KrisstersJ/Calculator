@@ -7,13 +7,31 @@
         mc:Ignorable="d"
         Title="Calculator" Height="400" Width="300">
     <Grid>
-        <TextBox x:Name="Display" HorizontalAlignment="Left" Margin="6,14,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="274" Height="48" FontSize="32" TextAlignment="Right" Foreground="White" Opacity="0.9" FontFamily="Franklin Gothic Demi" BorderBrush="Black" Background="#FFC8B4B4"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFD8996E" Offset="0.004"/>
+                <GradientStop Color="#FFD8996E" Offset="1"/>
+                <GradientStop Color="#FFE6DFDA" Offset="0.415"/>
+                <GradientStop Color="#FFF9EAE0" Offset="0.64"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="Display" HorizontalAlignment="Left" Margin="6,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274" Height="48" FontSize="32" TextAlignment="Right" Foreground="White" Opacity="0.9" FontFamily="Franklin Gothic Demi" BorderBrush="Black" TextChanged="Display_TextChanged">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8A7C7C"/>
+                    <GradientStop Color="#FF867E7E" Offset="1"/>
+                    <GradientStop Color="#FF474747" Offset="0.281"/>
+                    <GradientStop Color="#FF9E9E9E" Offset="0.751"/>
+                    <GradientStop Color="#FF8C7474" Offset="0.518"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
         <Button Content="1" HorizontalAlignment="Left" Margin="6,76,0,0" VerticalAlignment="Top" Height="60" Width="60" FontSize="22" Foreground="White" Opacity="0.9" FontFamily="Franklin Gothic Demi" BorderBrush="Black" Click="NumericButton_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF755151" Offset="0.506"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="1"/>
+                    <GradientStop Color="#FFD8996E" Offset="0"/>
                     <GradientStop Color="#FF967B7B" Offset="0.253"/>
                     <GradientStop Color="#FFA79B9B" Offset="0.755"/>
                 </LinearGradientBrush>
@@ -23,8 +41,8 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF755151" Offset="0.506"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="1"/>
+                    <GradientStop Color="#FFD8996E" Offset="0"/>
                     <GradientStop Color="#FF967B7B" Offset="0.253"/>
                     <GradientStop Color="#FFA79B9B" Offset="0.755"/>
                 </LinearGradientBrush>
@@ -34,8 +52,8 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF755151" Offset="0.506"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="1"/>
+                    <GradientStop Color="#FFD8996E" Offset="0"/>
                     <GradientStop Color="#FF967B7B" Offset="0.253"/>
                     <GradientStop Color="#FFA79B9B" Offset="0.755"/>
                 </LinearGradientBrush>
@@ -45,8 +63,8 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF755151" Offset="0.506"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="1"/>
+                    <GradientStop Color="#FFD8996E" Offset="0"/>
                     <GradientStop Color="#FF967B7B" Offset="0.253"/>
                     <GradientStop Color="#FFA79B9B" Offset="0.755"/>
                 </LinearGradientBrush>
@@ -56,8 +74,8 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF755151" Offset="0.506"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="1"/>
+                    <GradientStop Color="#FFD8996E" Offset="0"/>
                     <GradientStop Color="#FF967B7B" Offset="0.253"/>
                     <GradientStop Color="#FFA79B9B" Offset="0.755"/>
                 </LinearGradientBrush>
@@ -67,8 +85,8 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF755151" Offset="0.506"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="1"/>
+                    <GradientStop Color="#FFD8996E" Offset="0"/>
                     <GradientStop Color="#FF967B7B" Offset="0.253"/>
                     <GradientStop Color="#FFA79B9B" Offset="0.755"/>
                 </LinearGradientBrush>
@@ -78,8 +96,8 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF755151" Offset="0.506"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="1"/>
+                    <GradientStop Color="#FFD8996E" Offset="0"/>
                     <GradientStop Color="#FF967B7B" Offset="0.253"/>
                     <GradientStop Color="#FFA79B9B" Offset="0.755"/>
                 </LinearGradientBrush>
@@ -89,8 +107,8 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF755151" Offset="0.506"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="1"/>
+                    <GradientStop Color="#FFD8996E" Offset="0"/>
                     <GradientStop Color="#FF967B7B" Offset="0.253"/>
                     <GradientStop Color="#FFA79B9B" Offset="0.755"/>
                 </LinearGradientBrush>
@@ -100,8 +118,8 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF755151" Offset="0.506"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="1"/>
+                    <GradientStop Color="#FFD8996E" Offset="0"/>
                     <GradientStop Color="#FF967B7B" Offset="0.253"/>
                     <GradientStop Color="#FFA79B9B" Offset="0.755"/>
                 </LinearGradientBrush>
@@ -111,10 +129,76 @@
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF755151" Offset="0.506"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="1"/>
+                    <GradientStop Color="#FFD8996E" Offset="0"/>
                     <GradientStop Color="#FF967B7B" Offset="0.253"/>
                     <GradientStop Color="#FFA79B9B" Offset="0.755"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Add" Content="+" HorizontalAlignment="Left" Margin="212,208,0,0" VerticalAlignment="Top" Height="60" Width="60" FontSize="22" Foreground="#FF0A0000" Opacity="0.9" FontFamily="Franklin Gothic Demi" BorderBrush="Black" Click="Add_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB98787" Offset="0.506"/>
+                    <GradientStop Color="#FF966262" Offset="1"/>
+                    <GradientStop Color="#FF7D5B5B" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.202"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.779"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Subtract" Content="-" HorizontalAlignment="Left" Margin="212,142,0,0" VerticalAlignment="Top" Height="60" Width="60" FontSize="22" Foreground="#FF0A0000" Opacity="0.9" FontFamily="Franklin Gothic Demi" BorderBrush="Black" Click="Subtract_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB98787" Offset="0.506"/>
+                    <GradientStop Color="#FF966262" Offset="1"/>
+                    <GradientStop Color="#FF7D5B5B" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.202"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.779"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Multiply" Content="*" HorizontalAlignment="Left" Margin="212,275,0,0" VerticalAlignment="Top" Height="60" Width="60" FontSize="22" Foreground="#FF0A0000" Opacity="0.9" FontFamily="Franklin Gothic Demi" BorderBrush="Black" Click="Multiply_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB98787" Offset="0.506"/>
+                    <GradientStop Color="#FF966262" Offset="1"/>
+                    <GradientStop Color="#FF7D5B5B" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.202"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.779"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Clear" Content="CE" HorizontalAlignment="Left" Margin="6,275,0,0" VerticalAlignment="Top" Height="60" Width="60" FontSize="22" Foreground="#FF0A0000" Opacity="0.9" FontFamily="Franklin Gothic Demi" BorderBrush="Black" Click="OperationButton_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB98787" Offset="0.506"/>
+                    <GradientStop Color="#FF966262" Offset="1"/>
+                    <GradientStop Color="#FF7D5B5B" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.202"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.779"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Divide" Content="/" HorizontalAlignment="Left" Margin="144,275,0,0" VerticalAlignment="Top" Height="60" Width="60" FontSize="22" Foreground="#FF0A0000" Opacity="0.9" FontFamily="Franklin Gothic Demi" BorderBrush="Black" Click="Divide_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB98787" Offset="0.506"/>
+                    <GradientStop Color="#FF966262" Offset="1"/>
+                    <GradientStop Color="#FF7D5B5B" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.202"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.779"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Equal" Content="=" HorizontalAlignment="Left" Margin="212,76,0,0" VerticalAlignment="Top" Height="60" Width="60" FontSize="22" Foreground="#FF0A0000" Opacity="0.9" FontFamily="Franklin Gothic Demi" BorderBrush="Black" Click="Equal_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB98787" Offset="0.506"/>
+                    <GradientStop Color="#FF966262" Offset="1"/>
+                    <GradientStop Color="#FF7D5B5B" Offset="0"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.202"/>
+                    <GradientStop Color="#FFD8996E" Offset="0.779"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
